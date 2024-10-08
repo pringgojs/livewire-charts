@@ -22,12 +22,12 @@ class BarChartComponent extends Component
 
     protected $listeners = ['refreshComponent' => '$refresh', 'updateChart'];
 
-    public function mount($series, $categories)
+    public function mount($series, $categories, $colors = [])
     {
         $this->id = Str::random(10);
         $this->series = $series;
         $this->categories = $categories;
-        $this->colors = $this->generateColors(count($series));
+        $this->colors = $colors ? : $this->generateColors(count($series));
     }
 
     public function updateChart($categories, $series)

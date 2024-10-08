@@ -3,8 +3,11 @@
     <div wire:ignore>
         <div id="bar-chart-{{ $id }}"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </div>
+
+@assets
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+@endassets
 
 @script
     <script>
